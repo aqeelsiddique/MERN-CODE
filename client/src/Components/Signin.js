@@ -66,6 +66,7 @@ export const Signin = () => {
                     placeholder='Your Name*'>
                       
                     </input>
+                    
 
                     {/* <input type = "text" name='password' id ="password" autoComplete= "on"
                         value={password}
