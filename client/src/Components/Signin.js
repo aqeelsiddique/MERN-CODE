@@ -93,7 +93,7 @@ export const Signin = () => {
                 ></input>
 
                 <input
-                  type="text"
+                  type="password"
                   name="password"
                   id="password"
                   autoComplete="on"
