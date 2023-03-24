@@ -55,14 +55,13 @@ router.post('/register' , async (req, res) =>{
 ///LOGIN  ROUTE
 router.post('/login', async (req, res)=>{
     try {
-        const {name} = req.body;
-        if (!name) {
+        const {name, password} = req.body;
+        if (!name || !password) {
             return res.status(400).send({error:"invalid"})
         }
-       
         const userlogin = await User.findOne({ name: name });
         if (userlogin){
-            // const isMatch = await bcrypt.compare(password, userlogin.password);
+            const isMatch = await bcrypt.compare(password, userlogin.password);
             const token = await userlogin.generateAuthToken();
 
             console.log(token)
@@ -71,28 +70,18 @@ router.post('/login', async (req, res)=>{
                 httpOnly: true
             })
             ///create a cokki4res.cokkie
-
-
-            if(!userlogin ) {
+            if(!isMatch) {
                 res.status(422).send({message: "user error"})
             } else {
-                res.send({meassage:" wellcome user  login sucessfully"})
-    
-                
+                res.send({meassage:" wellcome user  login sucessfully"})                
             }
 
         } else {
             res.status(422).send({message: "invalid"})
-           
-
         }
-       
-       
-
     } catch(err) {
         console.log(err);
     }
-
     // console.log(req.body);
     // res.send({message:"awesome"});
 })
