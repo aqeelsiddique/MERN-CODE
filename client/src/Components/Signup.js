@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import backgroundimage from "../images/background.jpg";
 
-import signup from "../images/background.jpg";
 
 export const Signup = () => {
   const navigate = useNavigate();
