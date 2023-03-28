@@ -90,7 +90,10 @@ export const Signin = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your Name*"
-                >    </input>
+                >    
+                
+                
+                </input>
 
                 <input
                   type="password"
