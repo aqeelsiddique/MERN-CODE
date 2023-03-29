@@ -13,7 +13,7 @@ router.get('/' , (req, res) =>{
     res.send('heel0 word from the server router js')
 });
 ////asyn code
-router.post('/register' , async (req, res) =>{
+router.post('/register' , async (req, res)=>{
 
 
     //this code line means agr humy specfie data chaiyae tu yeh estmal kr sgthy
