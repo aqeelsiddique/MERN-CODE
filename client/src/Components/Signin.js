@@ -91,7 +91,12 @@ export const Signin = () => {
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your Name*"
                 >    
-                
+    
+
+
+
+
+    
                 
                 </input>
 
