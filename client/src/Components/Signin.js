@@ -92,6 +92,12 @@ export const Signin = () => {
                   placeholder="Your Name*"
                 >    
     
+
+
+
+
+
+    
                 
                 </input>
 
